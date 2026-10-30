@@ -47,7 +47,7 @@ if st.button("Predict", type="primary", use_container_width=True):
               thalach, exang, oldpeak, slope, ca, thal]
     row = pd.DataFrame([values], columns=FEATURES)
     pred = 1 - int(model.predict(row)[0])
-prob = float(model.predict_proba(row)[0][0])
+    prob = float(model.predict_proba(row)[0][0])
    
 
     if pred == 1:
